@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="ShoppingListApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping List</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="ListController">
+    <h1>Example #1</h1>
+    <h1>Angular App</h1>
+    <hr>
+
+    <h4>So far {{list.length}} items</h4>
+    <h3>My Shopping List</h3>
+    <table>
+        <tr ng-repeat="item in list">
+            <td>{{$index+1}}</td>
+            <td>{{item}}</td>
+            <td>
+                <button class="btn btn-danger" ng-click="remove(item)">X</button>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <input type="text" ng-model="newItem">
+    <button class="btn btn-success" ng-click="addItem(newItem)">Add</button>
+
+    <hr>
+    <h3>Deleted Items</h3>
+    <table>
+        <tr ng-repeat="item in deleted">
+            <td>{{$index+1}}</td>
+            <td>{{item}}</td>
+            <td>
+                <button class="btn btn-success" ng-click="addBack(item)">Add back</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

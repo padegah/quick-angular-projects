@@ -1,0 +1,51 @@
+.table-top tr {
+    font-size: 30px;
+    background-color: black;
+    color: white;
+}
+
+.table-top tr:hover {
+    opacity: 0.7;
+}
+
+.table-top td {
+    width: 33%;
+    border: 5px solid white;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.table-top td:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.table-top img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.table-bottom {
+    border: 10px solid black;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.table-bottom tr:hover {
+    background-color: grey;
+}
+
+.table-bottom td {
+    font-size: 20px;
+    border: 5px solid grey;
+    text-align: center;;
+}
+
+.table-bottom img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SingersList">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Popular Singers</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+<body ng-controller="SingerController">
+    <h1>Example #4</h1>
+    <h1>with Angular Prince</h1>
+    <hr>
+
+    <div class="top-area">
+        <span class="top-size">See the</span>
+        <button ng-click="gender = 'male'">Male</button>
+        <button ng-click="gender = 'female'">Female</button>
+        <span class="top-size">Singers</span>
+    </div>
+    
+    <table class="singer-table">
+        <tr ng-repeat="singer in singers" ng-if="singer.gender == gender">
+            <td>
+                <img src="{{singer.pic}}" class="singer-pic">
+            </td>
+            <td class="name-size">{{singer.name}}</td>
+            <td><img src="{{singer.quality}}" class="quality-icon"></td>
+        </tr>
+    </table>
+</body>
+</html>

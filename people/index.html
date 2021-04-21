@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PeopleApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="PeopleController">
+    <h1>Example #6</h1>
+    <h1>with Angular Prince</h1>
+    <hr>
+
+    <div class="click-these-area">
+        <h4 class="green-top">Click These</h4>
+        <div ng-repeat="leader in leaders">
+            <div class="highlight" ng-click="addThisOne(leader);">
+                <img src="{{leader.pic}}" alt="">{{leader.name}}
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="it-goes-here">
+        <h4 class="red-top">It Goes Here</h4>
+        <div ng-repeat="collect in collection">
+            <img src="{{collect.pic}}" alt="">{{collect.name}}
+            <hr>
+        </div>
+    </div>
+</body>
+</html>
